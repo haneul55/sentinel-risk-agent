@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1200" height="480" font-family="'Malgun Gothic',sans-serif">
+<rect width="1000" height="400" fill="#FFFFFF"/>
+<text x="50" y="44" font-size="27" fill="#6B7280">주요 공시(8-K) 184건이 접수된 시각 · 한국 시간</text>
+<text x="50" y="108" font-size="60" font-weight="700" fill="#2F6FE4">99.5%</text>
+<text x="232" y="106" font-size="31" font-weight="700" fill="#14295A">(183건)가 한국 업무시간 밖</text>
+<rect x="390.0" y="150" width="330.0" height="180" fill="#EEF3FD"/>
+<text x="555.0" y="270" text-anchor="middle" font-size="25" fill="#2F6FE4" font-weight="700">평일 업무시간</text>
+<text x="555.0" y="302" text-anchor="middle" font-size="25" fill="#2F6FE4">9~18시 · 1건</text>
+<rect x="65.1" y="326.2" width="26.4" height="3.8" fill="#9AA6B8"/>
+<rect x="101.8" y="327.0" width="26.4" height="3.0" fill="#9AA6B8"/>
+<rect x="211.8" y="327.0" width="26.4" height="3.0" fill="#9AA6B8"/>
+<rect x="248.5" y="180.0" width="26.4" height="150.0" fill="#14295A"/>
+<rect x="285.1" y="228.1" width="26.4" height="101.9" fill="#14295A"/>
+<rect x="321.8" y="314.6" width="26.4" height="15.4" fill="#9AA6B8"/>
+<rect x="395.1" y="327.0" width="26.4" height="3.0" fill="#9AA6B8"/>
+<rect x="761.8" y="324.2" width="26.4" height="5.8" fill="#9AA6B8"/>
+<rect x="798.5" y="308.8" width="26.4" height="21.2" fill="#9AA6B8"/>
+<rect x="835.1" y="305.0" width="26.4" height="25.0" fill="#9AA6B8"/>
+<rect x="871.8" y="310.8" width="26.4" height="19.2" fill="#9AA6B8"/>
+<rect x="908.5" y="324.2" width="26.4" height="5.8" fill="#9AA6B8"/>
+<line x1="60" y1="330" x2="940" y2="330" stroke="#6B7280" stroke-width="2"/>
+<text x="324.7" y="200" font-size="25" font-weight="700" fill="#14295A">05~07시 131건</text>
+<text x="324.7" y="230" font-size="22" fill="#6B7280">미국 장 마감 직후 실적 발표</text>
+<text x="60.0" y="364" text-anchor="middle" font-size="24" fill="#6B7280">0시</text>
+<text x="280.0" y="364" text-anchor="middle" font-size="24" fill="#6B7280">6시</text>
+<text x="500.0" y="364" text-anchor="middle" font-size="24" fill="#6B7280">12시</text>
+<text x="720.0" y="364" text-anchor="middle" font-size="24" fill="#6B7280">18시</text>
+<text x="940.0" y="364" text-anchor="middle" font-size="24" fill="#6B7280">24시</text>
+<text x="50" y="394" font-size="19" fill="#9CA3AF">출처: SEC EDGAR 접수 시각 직접 집계 (KIC 13F 상위 15종목, 2025.11.6~2026.11.6)</text>
+</svg>

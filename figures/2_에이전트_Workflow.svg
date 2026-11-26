@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 55 1200 585" width="1200" height="585" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2F6FE4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="640" fill="#FFFFFF"/>
+
+  <!-- main flow -->
+  <g text-anchor="middle">
+    <rect x="20" y="80" width="165" height="120" rx="10" fill="#FFFFFF" stroke="#B8C2D3" stroke-width="1.5"/>
+    <text x="102" y="118" font-size="16" font-weight="700" fill="#1F2937">트리거</text>
+    <text x="102" y="144" font-size="13" fill="#4B5563">규칙 경보</text>
+    <text x="102" y="164" font-size="13" fill="#4B5563">AI가 찾은 의심 문서</text>
+    <text x="102" y="184" font-size="13" font-weight="700" fill="#2F6FE4">위험 요인 새 문장</text>
+
+    <g fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.8">
+      <rect x="215" y="80" width="165" height="120" rx="10"/>
+      <rect x="410" y="80" width="165" height="120" rx="10"/>
+      <rect x="605" y="80" width="165" height="120" rx="10"/>
+    </g>
+    <text x="297" y="118" font-size="16" font-weight="700" fill="#14295A">① 조사 계획</text>
+    <text x="297" y="146" font-size="13" fill="#4B5563">이벤트 유형별로</text>
+    <text x="297" y="166" font-size="13" fill="#4B5563">확인할 것 정하기</text>
+
+    <text x="492" y="118" font-size="16" font-weight="700" fill="#14295A">② 정보 탐색</text>
+    <text x="492" y="146" font-size="13" fill="#4B5563">필요한 도구를</text>
+    <text x="492" y="166" font-size="13" fill="#4B5563">스스로 골라 호출</text>
+
+    <text x="687" y="118" font-size="16" font-weight="700" fill="#14295A">③ 근거 검증</text>
+    <text x="687" y="146" font-size="13" fill="#4B5563">출처 2곳 이상 일치?</text>
+    <text x="687" y="166" font-size="13" fill="#4B5563">원문 문장 인용 가능?</text>
+
+    <!-- decision -->
+    <path d="M870,85 L935,140 L870,195 L805,140 z" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.8"/>
+    <text x="870" y="137" font-size="14" font-weight="700" fill="#14295A">근거</text>
+    <text x="870" y="156" font-size="14" font-weight="700" fill="#14295A">충분?</text>
+
+    <!-- result -->
+    <rect x="975" y="70" width="205" height="140" rx="10" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.8"/>
+    <text x="1077" y="104" font-size="16" font-weight="700" fill="#14295A">④ 연쇄 노출 · 판정</text>
+    <text x="1077" y="134" font-size="13" font-weight="700" fill="#2F6FE4">연결 종목까지 노출 합산</text>
+    <text x="1077" y="158" font-size="13" fill="#374151">심각도: 긴급 · 주의 · 참고</text>
+    <text x="1077" y="182" font-size="13" fill="#374151">근거 문장 + 원문 링크</text>
+
+    <!-- unresolved -->
+    <rect x="975" y="250" width="205" height="76" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+    <text x="1077" y="281" font-size="15" font-weight="700" fill="#1F2937">'확인 필요'로 표시</text>
+    <text x="1077" y="305" font-size="13" fill="#4B5563">브리핑에 넣고 종료</text>
+  </g>
+
+  <!-- arrows main -->
+  <g stroke="#4B5563" stroke-width="1.8" fill="none" marker-end="url(#ar)">
+    <path d="M185,140 H213"/>
+    <path d="M380,140 H408"/>
+    <path d="M575,140 H603"/>
+    <path d="M770,140 H803"/>
+    <path d="M935,140 H973"/>
+  </g>
+  <text x="954" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#14295A">예</text>
+
+  <!-- no branch -->
+  <path d="M870,195 V288" stroke="#4B5563" stroke-width="1.8" fill="none"/>
+  <text x="882" y="240" font-size="13" font-weight="700" fill="#4B5563">아니오</text>
+  <path d="M870,288 H545 V202" stroke="#2F6FE4" stroke-width="1.8" fill="none" stroke-dasharray="6 4" marker-end="url(#arp)"/>
+  <text x="707" y="278" text-anchor="middle" font-size="13" fill="#2F6FE4">탐색 3회 미만 → 다른 도구 · 검색어로 재탐색</text>
+  <path d="M870,288 H973" stroke="#4B5563" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <text x="922" y="308" text-anchor="middle" font-size="13" fill="#4B5563">3회 도달</text>
+
+  <!-- tools -->
+  <path d="M492,288 V0" stroke="none"/>
+  <rect x="20" y="352" width="1160" height="122" rx="12" fill="#F7F9FC" stroke="#E3E8F0" stroke-width="1.2"/>
+  <text x="40" y="380" font-size="15" font-weight="700" fill="#14295A">에이전트가 쓰는 도구 (Tool / API)</text>
+  <rect x="34" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="101" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">search_filings</text>
+  <text x="101" y="442" text-anchor="middle" font-size="12" fill="#4B5563">SEC 공시 검색</text>
+  <rect x="176" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="243" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">get_financials</text>
+  <text x="243" y="442" text-anchor="middle" font-size="12" fill="#4B5563">XBRL 재무 수치</text>
+  <rect x="318" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="385" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">search_news</text>
+  <text x="385" y="442" text-anchor="middle" font-size="12" fill="#4B5563">GDELT·Finnhub 뉴스</text>
+  <rect x="460" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="527" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">get_price</text>
+  <text x="527" y="442" text-anchor="middle" font-size="12" fill="#4B5563">주가 · 등락률</text>
+  <rect x="602" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="669" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">get_fx / get_rate</text>
+  <text x="669" y="442" text-anchor="middle" font-size="12" fill="#4B5563">ECOS 환율·재무부 금리</text>
+  <rect x="744" y="394" width="134" height="64" rx="8" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2"/>
+  <text x="811" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">recall_memory</text>
+  <text x="811" y="442" text-anchor="middle" font-size="12" fill="#4B5563">과거 사건 · 피드백</text>
+  <rect x="886" y="394" width="134" height="64" rx="8" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.8"/>
+  <text x="953" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">get_relations</text>
+  <text x="953" y="442" text-anchor="middle" font-size="12" fill="#14295A">종목 간 관계 지도</text>
+  <rect x="1028" y="394" width="134" height="64" rx="8" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.8"/>
+  <text x="1095" y="420" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1F2937" font-family="Consolas,monospace">diff_risk_factors</text>
+  <text x="1095" y="442" text-anchor="middle" font-size="12" fill="#14295A">위험 요인 새 문장</text>
+  <!-- link step2 to tools -->
+  <path d="M440,202 V350" stroke="#2F6FE4" stroke-width="1.5" fill="none" stroke-dasharray="3 3" marker-start="url(#arp)" marker-end="url(#arp)"/>
+  <text x="432" y="330" text-anchor="end" font-size="12" fill="#2F6FE4">호출 · 결과</text>
+
+  <!-- bottom: autonomy & termination -->
+  <g>
+    <rect x="20" y="498" width="370" height="124" rx="10" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.5"/>
+    <rect x="415" y="498" width="370" height="124" rx="10" fill="#FFFFFF" stroke="#14295A" stroke-width="1.5"/>
+    <rect x="810" y="498" width="370" height="124" rx="10" fill="#FFFFFF" stroke="#B8C2D3" stroke-width="1.5"/>
+    <text x="40" y="526" font-size="15" font-weight="700" fill="#14295A">에이전트가 스스로 판단</text>
+    <text x="435" y="526" font-size="15" font-weight="700" fill="#1F2937">사람이 결정</text>
+    <text x="830" y="526" font-size="15" font-weight="700" fill="#14295A">종료 조건</text>
+    <g font-size="13" fill="#374151">
+      <text x="40" y="554">· 무엇을 조사할지 계획</text>
+      <text x="40" y="576">· 어떤 도구를 쓸지, 더 찾을지</text>
+      <text x="40" y="598">· 심각도 판정과 경보 여부</text>
+      <text x="435" y="554">· 매수 · 매도 등 투자 결정</text>
+      <text x="435" y="576">· 경보 기준값 변경</text>
+      <text x="435" y="598">· 결과에 대한 피드백</text>
+      <text x="830" y="554">① 출처 2곳 이상 근거 확보 → 결과 생성</text>
+      <text x="830" y="576">② 탐색 3회 도달 → '확인 필요'로 종료</text>
+      <text x="830" y="598">③ 보유 종목과 무관 판정 → 기록만 하고 종료</text>
+    </g>
+  </g>
+</svg>

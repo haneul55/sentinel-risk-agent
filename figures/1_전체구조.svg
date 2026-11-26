@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2F6FE4"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="620" fill="#FFFFFF"/>
+
+  <!-- column headers -->
+  <g font-size="17" font-weight="700" text-anchor="middle">
+    <text x="115" y="45" fill="#4B5563">데이터 출처</text>
+    <text x="350" y="45" fill="#14295A">① 수집·정제</text>
+    <text x="590" y="45" fill="#14295A">② 위험 감지</text>
+    <text x="840" y="45" fill="#2F6FE4">③ AI 에이전트</text>
+    <text x="1080" y="45" fill="#14295A">④ 전달</text>
+  </g>
+
+  <!-- col1: sources -->
+  <g font-size="14" text-anchor="middle">
+    <g fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.2">
+      <rect x="20" y="70" width="190" height="66" rx="8"/>
+      <rect x="20" y="152" width="190" height="66" rx="8"/>
+      <rect x="20" y="234" width="190" height="66" rx="8"/>
+      <rect x="20" y="316" width="190" height="66" rx="8"/>
+      <rect x="20" y="398" width="190" height="66" rx="8"/>
+      <rect x="20" y="480" width="190" height="66" rx="8"/>
+    </g>
+    <g fill="#1F2937" font-weight="700">
+      <text x="115" y="98">SEC 13F</text>
+      <text x="115" y="180">SEC EDGAR</text>
+      <text x="115" y="262">GDELT · Finnhub</text>
+      <text x="115" y="344">Finnhub · Alpha Vantage</text>
+      <text x="115" y="426">한국은행 ECOS</text>
+      <text x="115" y="508">미 재무부</text>
+    </g>
+    <g fill="#4B5563" font-size="13">
+      <text x="115" y="120">KIC 실제 보유 종목</text>
+      <text x="115" y="202">공시 · 재무 (8-K, 10-K, XBRL)</text>
+      <text x="115" y="284">뉴스</text>
+      <text x="115" y="366">주가</text>
+      <text x="115" y="448">원/달러 환율</text>
+      <text x="115" y="530">미 국채 금리</text>
+    </g>
+  </g>
+  <!-- source bus -->
+  <g stroke="#9CA3AF" stroke-width="1.5" fill="none">
+    <path d="M210,103 H228 M210,185 H228 M210,267 H228 M210,349 H228 M210,431 H228 M210,513 H228"/>
+    <path d="M228,103 V513"/>
+  </g>
+  <path d="M228,115 H248" stroke="#4B5563" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- col2: pipeline -->
+  <rect x="240" y="62" width="220" height="540" rx="12" fill="#F7F9FC" stroke="#E3E8F0" stroke-width="1"/>
+  <g text-anchor="middle">
+    <g fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.5">
+      <rect x="252" y="80" width="196" height="72" rx="8"/>
+      <rect x="252" y="182" width="196" height="72" rx="8"/>
+      <rect x="252" y="284" width="196" height="72" rx="8"/>
+    </g>
+    <g font-size="15" font-weight="700" fill="#1F2937">
+      <text x="350" y="108">수집</text>
+      <text x="350" y="210">정제</text>
+      <text x="350" y="312">보유 종목 연결</text>
+    </g>
+    <g font-size="13" fill="#4B5563">
+      <text x="350" y="132">뉴스 15분 · 지표 매일 자동 수집</text>
+      <text x="350" y="234">중복 제거 · 형식 통일</text>
+      <text x="350" y="336">티커 매칭 · 종목 간 관계 지도</text>
+    </g>
+    <!-- DB cylinder -->
+    <path d="M262,402 v92 a88,14 0 0 0 176,0 v-92" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.5"/>
+    <ellipse cx="350" cy="402" rx="88" ry="14" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.5"/>
+    <text x="350" y="446" font-size="15" font-weight="700" fill="#1F2937">저장소 (DB)</text>
+    <text x="350" y="470" font-size="13" fill="#4B5563">문서 · 시계열</text>
+    <text x="350" y="490" font-size="13" fill="#4B5563">이벤트 · 피드백</text>
+    <rect x="282" y="540" width="136" height="28" rx="14" fill="#2F6FE4"/>
+    <text x="350" y="559" font-size="13" font-weight="700" fill="#FFFFFF">데이터 엔지니어링</text>
+  </g>
+  <g stroke="#4B5563" stroke-width="1.8" fill="none" marker-end="url(#ar)">
+    <path d="M350,152 V180"/>
+    <path d="M350,254 V282"/>
+    <path d="M350,356 V386"/>
+  </g>
+
+  <!-- col2 -> col3 bus -->
+  <g stroke="#4B5563" stroke-width="1.8" fill="none">
+    <path d="M438,448 H474 V128"/>
+    <path d="M474,128 H488" marker-end="url(#ar)"/>
+    <path d="M474,272 H488" marker-end="url(#ar)"/>
+    <path d="M474,418 H488" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- col3: detection -->
+  <g>
+    <rect x="490" y="70" width="200" height="116" rx="10" fill="#FFFFFF" stroke="#B8C2D3" stroke-width="1.5"/>
+    <rect x="490" y="200" width="200" height="144" rx="10" fill="#FFFFFF" stroke="#B8C2D3" stroke-width="1.5"/>
+    <rect x="490" y="358" width="200" height="120" rx="10" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="2"/>
+    <g text-anchor="middle" font-size="15" font-weight="700" fill="#1F2937">
+      <text x="590" y="98">규칙 엔진 (숫자)</text>
+      <text x="590" y="228">AI 분류 (글)</text>
+      <text x="590" y="386" fill="#14295A">조짐 감지 (문구 비교)</text>
+    </g>
+    <g font-size="13" fill="#374151">
+      <text x="512" y="124">· 주가 하루 −7% 이하</text>
+      <text x="512" y="148">· 원/달러 하루 ±1.5%</text>
+      <text x="512" y="172">· 금리 급변</text>
+      <text x="512" y="256">· 소송</text>
+      <text x="512" y="280">· 신용등급 하향</text>
+      <text x="512" y="304">· 실적 쇼크</text>
+      <text x="512" y="328">· 경영진 교체</text>
+      <text x="512" y="414">· 10-K·10-Q 위험 요인</text>
+      <text x="512" y="438">· 직전 보고서에 없던</text>
+      <text x="524" y="460">새 문장 추출</text>
+    </g>
+    <rect x="496" y="496" width="188" height="48" rx="8" fill="#FFFFFF" stroke="#B8C2D3" stroke-dasharray="4 3"/>
+    <text x="590" y="516" text-anchor="middle" font-size="13" font-weight="700" fill="#14295A">확실한 건 규칙,</text>
+    <text x="590" y="534" text-anchor="middle" font-size="13" font-weight="700" fill="#14295A">애매한 건 AI</text>
+  </g>
+
+  <!-- col3 -> agent -->
+  <g stroke="#4B5563" stroke-width="1.8" fill="none">
+    <path d="M690,128 H710 V418 H690"/>
+    <path d="M690,272 H710"/>
+    <path d="M710,250 H728" marker-end="url(#ar)"/>
+  </g>
+  <text x="712" y="242" font-size="12" fill="#4B5563" text-anchor="start" transform="rotate(0)"></text>
+
+  <!-- col4: agent -->
+  <rect x="730" y="62" width="220" height="360" rx="12" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="2"/>
+  <text x="840" y="88" text-anchor="middle" font-size="16" font-weight="700" fill="#14295A">리스크 조사 에이전트</text>
+  <g fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.2">
+    <rect x="745" y="100" width="170" height="48" rx="7"/>
+    <rect x="745" y="160" width="170" height="48" rx="7"/>
+    <rect x="745" y="220" width="170" height="48" rx="7"/>
+    <rect x="745" y="280" width="170" height="48" rx="7"/>
+  </g>
+  <rect x="745" y="340" width="170" height="48" rx="7" fill="#2F6FE4"/>
+  <g text-anchor="middle" font-size="14" fill="#1F2937">
+    <text x="830" y="121" font-weight="700">① 조사 계획</text>
+    <text x="830" y="139" font-size="12" fill="#4B5563">무엇을 확인할지 결정</text>
+    <text x="830" y="181" font-weight="700">② 도구 호출</text>
+    <text x="830" y="199" font-size="12" fill="#4B5563">공시 · 뉴스 · 주가 검색</text>
+    <text x="830" y="241" font-weight="700">③ 교차 검증</text>
+    <text x="830" y="259" font-size="12" fill="#4B5563">출처 2곳 이상 확인</text>
+    <text x="830" y="301" font-weight="700">④ 연쇄 노출 계산</text>
+    <text x="830" y="319" font-size="12" fill="#4B5563">관계 지도로 연결 종목 합산</text>
+    <text x="830" y="361" font-weight="700" fill="#FFFFFF">⑤ 심각도 판정</text>
+    <text x="830" y="379" font-size="12" fill="#FFFFFF">긴급 · 주의 · 참고</text>
+  </g>
+  <g stroke="#2F6FE4" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <path d="M830,148 V158"/>
+    <path d="M830,208 V218"/>
+    <path d="M830,268 V278"/>
+    <path d="M830,328 V338"/>
+  </g>
+  <!-- retry loop -->
+  <path d="M915,244 H935 V184 H917" stroke="#2F6FE4" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text x="840" y="408" font-size="12" fill="#2F6FE4" text-anchor="middle">근거 부족 시 ③→② 재탐색 (최대 3회)</text>
+
+  <!-- memory -->
+  <path d="M760,462 v68 a80,13 0 0 0 160,0 v-68" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.5"/>
+  <ellipse cx="840" cy="462" rx="80" ry="13" fill="#EEF3FD" stroke="#2F6FE4" stroke-width="1.5"/>
+  <text x="840" y="500" text-anchor="middle" font-size="15" font-weight="700" fill="#1F2937">Memory</text>
+  <text x="840" y="522" text-anchor="middle" font-size="12" fill="#4B5563">과거 사건 · 담당자 피드백</text>
+  <path d="M840,424 V447" stroke="#2F6FE4" stroke-width="1.5" fill="none" marker-start="url(#ar)" marker-end="url(#ar)"/>
+
+  <!-- agent -> delivery -->
+  <g stroke="#4B5563" stroke-width="1.8" fill="none">
+    <path d="M950,240 H965 V140 H978" marker-end="url(#ar)"/>
+    <path d="M965,240 V260 H978" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- col5: delivery -->
+  <rect x="980" y="100" width="200" height="80" rx="10" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.5"/>
+  <rect x="980" y="220" width="200" height="80" rx="10" fill="#FFFFFF" stroke="#2F6FE4" stroke-width="1.5"/>
+  <rect x="980" y="350" width="200" height="90" rx="10" fill="#FFFFFF" stroke="#14295A" stroke-width="2"/>
+  <g text-anchor="middle">
+    <text x="1080" y="132" font-size="15" font-weight="700" fill="#2F6FE4">긴급 경보</text>
+    <text x="1080" y="156" font-size="13" fill="#4B5563">즉시 알림 + 원문 링크</text>
+    <text x="1080" y="252" font-size="15" font-weight="700" fill="#14295A">아침 브리핑</text>
+    <text x="1080" y="276" font-size="13" fill="#4B5563">주의·참고 항목 요약</text>
+    <text x="1080" y="385" font-size="15" font-weight="700" fill="#1F2937">투자 담당자</text>
+    <text x="1080" y="410" font-size="13" fill="#4B5563">판단 · 의사결정은 사람이</text>
+  </g>
+  <g stroke="#4B5563" stroke-width="1.8" fill="none" marker-end="url(#ar)">
+    <path d="M1180,140 H1192 V395 H1182"/>
+    <path d="M1080,300 V348"/>
+  </g>
+  <!-- feedback loop -->
+  <path d="M1080,440 V575 H840 V545" stroke="#2F6FE4" stroke-width="2" fill="none" marker-end="url(#arg)"/>
+  <rect x="872" y="561" width="196" height="28" rx="14" fill="#FFFFFF" stroke="#2F6FE4"/>
+  <text x="970" y="580" text-anchor="middle" font-size="13" font-weight="700" fill="#14295A">피드백: 유용함 / 관련 없음</text>
+</svg>

@@ -1,0 +1,4 @@
+build/
+template/
+__pycache__/
+*.pyc

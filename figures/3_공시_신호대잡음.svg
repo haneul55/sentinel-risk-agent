@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 390" width="1200" height="468" font-family="'Malgun Gothic',sans-serif">
+<rect width="1000" height="390" fill="#FFFFFF"/>
+<text x="50" y="44" font-size="27" fill="#6B7280">KIC 상위 15종목의 1년 SEC 공시 28,688건</text>
+<text x="50" y="116" font-size="64" font-weight="700" fill="#2F6FE4">0.6%</text>
+<text x="222" y="114" font-size="30" font-weight="700" fill="#14295A">(184건)만 주요 사건 공시(8-K)</text>
+<g stroke="#FFFFFF" stroke-width="2">
+  <rect x="50" y="160" width="722.7" height="76" fill="#CBD2DB"/>
+  <rect x="772.7" y="160" width="169.3" height="76" fill="#DDE2E8"/>
+</g>
+<rect x="942" y="160" width="8" height="76" fill="#2F6FE4"/>
+<text x="72" y="207" font-size="24" font-weight="700" fill="#1F2937">채권 발행 설명서 (424B2) · 23,037건 · 80%</text>
+<text x="790" y="192" font-size="20" font-weight="700" fill="#374151">기타 서류</text>
+<text x="790" y="220" font-size="20" fill="#374151">5,467건 · 19%</text>
+<path d="M946,240 V268" stroke="#2F6FE4" stroke-width="2.5"/>
+<text x="950" y="300" text-anchor="end" font-size="25" font-weight="700" fill="#2F6FE4">주요 사건 공시(8-K) 184건 · 에이전트가 볼 대상</text>
+<text x="50" y="368" font-size="20" fill="#9CA3AF">출처: SEC EDGAR Submissions API 직접 집계 (KIC 13F 상위 15종목, 2025.11.6~2026.11.6)</text>
+</svg>
